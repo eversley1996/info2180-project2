@@ -1,7 +1,7 @@
 <?php
     session_start();
-    if( isset( $_POST['submit_form'])){
-    $host = getenv('IP');
+    
+    $host = "localhost";
     $username = "eversley";
     $password = 'E.Francis14';
     $dbname = 'schema';
@@ -16,7 +16,7 @@
     $password = filter_var($password, FILTER_SANITIZE_STRING);
     $email = filter_var($email, FILTER_SANITIZE_EMAIL);
     
-    $password = md5($password);
+    $password = password_hash($password, PASSWORD_DEFAULT);
     
     
     $_SESSION['firstname'] = $firstname;
@@ -24,11 +24,9 @@
     
     echo $_SESSION['firstname'], $_SESSION['lastname'];
     
-    /*$conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     
     $stmt = $conn->query("INSERT INTO users (`firstname`,`lastname`,`password`,`email`) VALUES 
-    ('$firstname', '$lastname', '$password', '$email')");
-    */
-
-    }
+    ($firstname, $lastname, $password, $email);");
+    
 ?>

@@ -1,0 +1,67 @@
+header{
+  font-family: Bahnschrift SemiBold;
+  background-color: black;
+  color: white;
+  height: 30px;
+  grid-area: header;
+  padding-bottom: 20px;
+  padding-left: 10px;
+}
+
+body{
+  display: grid;
+  grid-template-columns: 1fr 200px 900px 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+  ". header header ."
+  ". sidepanel mainsection ."
+  ". sidepanel mainsection ."
+  ". sidepanel mainsection ."
+  ". sidepanel mainsection .";
+  
+}
+
+
+#mainsection{
+  grid-area: mainsection;
+  font-family: Bahnschrift SemiBold;
+  padding-left: 20px;
+}
+
+#sidepanel{
+  font-family: Bahnschrift SemiBold;
+  grid-area: sidepanel;
+  background-color: Gainsboro;
+  padding-left: 10px;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 13px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+.button1 {
+  border-radius: 8px;
+  float: right;
+}
+
+.button2 {
+  background-color: #4169E1;
+  border-radius: 8px;
+  display: inline-block;
+  text-align: center;
+  color: white;
+  border: none;
+  font-size: px;
+}
+
+h1{
+  font-weight: bold;
+}
