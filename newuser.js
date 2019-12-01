@@ -1,4 +1,3 @@
-
 let submitForm = (form) =>{
     let firstname = form.firstname.value;
     let lastname = form.lastname.value;
