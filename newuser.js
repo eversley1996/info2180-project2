@@ -1,3 +1,4 @@
+
 let submitForm = (form) =>{
     let firstname = form.firstname.value;
     let lastname = form.lastname.value;
@@ -18,7 +19,7 @@ let submitForm = (form) =>{
 let checkPassword= (form, password) =>{
     let pattern = /(?-i)(?=^.{8,}$)((?!.*\s)(?=.*[A-Z])(?=.*[a-z]))(?=(1)(?=.*\d)|.*[^A-Za-z0-9])^.*$/;
 
-    if ((password != "") && (pattern.test(password))){
+    if ((password != "") && (pattern.test(password))==true){
         return true;
     }
     else{
@@ -47,9 +48,7 @@ let checkLastName = (form, lastname) =>{
 }
 
 let checkEmail = (form, email) =>{
-    if(email == "" || email == null){
-        form.email.style.color = "red";
-        form.email.style.border = "thick solid red";
+    if(email == " " || email == null){
         return false;
     }else{
         let pattern =  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
