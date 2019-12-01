@@ -15,19 +15,45 @@
     
         <div id="sidepanel">
             <p> <i class="fas fa-home"></i> Home</p>
-            <p> <i class="fas fa-user-plus"></i> Add User</p>
+            <a href ="AddUser.html" style="text-decoration:none"><p> <i class="fas fa-user-plus"></i> Add User</p></a>
             <p> <i class="fas fa-plus-circle"></i> New Issue</p>
             <p> <i class="fas fa-power-off"></i> Logout</p>
         </div>
 
+        <div id="mheader">
+            <h1>XSS Vulnerability in Add User Form</h1>
+        </div>
+
         <div id="message">
-
-
+            <p>
+                When an issue is clicked it will open and show the full details of the Issue (See Figure
+                4). These details should include the Title, Description, Type, Priority, Status, Date
+                Created and by whom, Date last updated, as well as who it is assigned to. There should
+                also be a button to Close the ticket that when clicked will update the ticket status to be
+                "Closed" and another button that when clicked will mark the ticket as "In Progress".
+                Whenever either of these buttons are clicked they should also update the "updated" 
+                date column for the issue with the current date and time when the respective button is
+                clicked. 
+            </p>
         </div>
 
         <div id="rightpanel">
-            
+            <p>
+                This is just test data. The actual data will come from the
+                php scrip when data is pulled from the server
+            </p>
         </div>
+
+        <button type="button" id="btn1">Mark as Closed</button> <br>
+        <button type="button" id="btn2">Mark in Progess</button>
+
+        <div id="issueNo">
+            <p>
+                > Issue created on Dec 1, 2019 by Eversley Francis (Test) <br>
+                > Last updated on Dec 2, 2019 by Eversley Franis (Test)
+            </p>
+        </div>
+    
 
     </body>
 </html>
