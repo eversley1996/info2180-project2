@@ -8,11 +8,13 @@ header{
     padding-left: 10px;
 }
 
-#form{
+#mainsection{
     grid-area: mainsection;
     font-family: Bahnschrift SemiBold;
     padding-left: 20px;
 }
+
+
 
 #sidepanel{
     font-family: Bahnschrift SemiBold;
